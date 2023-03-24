@@ -12,10 +12,6 @@
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
     "swagger": "node ./swagger.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gfatima/cse341-node.git"
-  },
   "keywords": [],
   "author": "Ivette Soto",
   "license": "ISC",

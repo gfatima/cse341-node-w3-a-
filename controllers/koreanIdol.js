@@ -2,7 +2,7 @@ const mongodb = require('../db/connect')
 const ObjectId = require('mongodb').ObjectId
 
 const getAll = async (req, res) => {
-  const result = await mongodb.getDb().db().collection('contacts').find()
+  const result = await mongodb.getDb().db().collection('KoreanIdol').find()
   result.toArray().then((lists) => {
     res.setHeader('Content-Type', 'application/json')
     res.status(200).json(lists)
@@ -11,74 +11,78 @@ const getAll = async (req, res) => {
 
 const getSingle = async (req, res) => {
   const userId = new ObjectId(req.params.id)
-  const result = await mongodb.getDb().db().collection('contacts').find({ _id: userId })
+  const result = await mongodb.getDb().db().collection('KoreanIdol').find({ _id: userId })
   result.toArray().then((lists) => {
     res.setHeader('Content-Type', 'application/json')
     res.status(200).json(lists[0])
   })
 }
 
-const createContact = async (req, res) => {
-  const contact = {
+const createKoreanIdol = async (req, res) => {
+  const koreanIdol = {
+    nativeName: req.body.nativeName,
     firstName: req.body.firstName,
     lastName: req.body.lastName,
-    email: req.body.email,
-    favoriteColor: req.body.favoriteColor,
-    birthday: req.body.birthday
+    birthday: req.body.birthday,
+    genere: req.body.genere,
+    height: req.body.height,
+    occupation: req.body.occupation
   }
   const response = await mongodb
     .getDb()
     .db('test')
-    .collection('contacts')
-    .insertOne(contact)
+    .collection('KoreanIdol')
+    .insertOne(koreanIdol)
   if (response.acknowledged) {
     res.status(201).json(response)
   } else {
-    res.status(500).json(response.error || 'Some error occurred while creating the contact.')
+    res.status(500).json(response.error || 'Some error occurred while creating the KoreanIdol.')
   }
 }
 
-const updateContact = async (req, res) => {
+const updateKoreanIdol = async (req, res) => {
   const userId = new ObjectId(req.params.id)
   // be aware of updateOne if you only want to update specific fields
-  const contact = {
+  const koreanIdol = {
+    nativeName: req.body.nativeName,
     firstName: req.body.firstName,
     lastName: req.body.lastName,
-    email: req.body.email,
-    favoriteColor: req.body.favoriteColor,
-    birthday: req.body.birthday
+    birthday: req.body.birthday,
+    genere: req.body.genere,
+    height: req.body.height,
+    occupation: req.body.occupation
   }
   const response = await mongodb
     .getDb()
     .db()
-    .collection('contacts')
-    .replaceOne({ _id: userId }, contact)
+    .collection('KoreanIdol')
+    .replaceOne({ _id: userId }, koreanIdol)
   console.log(response)
   if (response.modifiedCount !== 0) {
     res.status(204).send(userId + 'has been replaced')
   } else {
-    res.status(500).json(response.error || 'Some error occurred while updating the contact.')
+    res.status(500).json(response.error || 'Some error occurred while updating the Korean Idol.')
   }
 }
 
-const deleteContact = async (req, res) => {
+const deleteKoreanIdol = async (req, res) => {
   const userId = new ObjectId(req.params.id)
   const response = await mongodb
     .getDb()
     .db('test')
-    .collection('contacts')
+    .collection('KoreanIdol')
     .deleteOne({ _id: userId })
   if (response.deletedCount !== 0) {
     res.status(200).send(userId + 'has been deleted')
   } else {
-    res.status(500).json(response.error || 'Some error occurred while deleting the contact.')
+    res.status(500).json(response.error || 'Some error occurred while deleting the Korean Idol.')
   };
 }
 
 module.exports = {
   getAll,
   getSingle,
-  createContact,
-  updateContact,
-  deleteContact
+  createKoreanIdol,
+  updateKoreanIdol,
+  deleteKoreanIdol
 }

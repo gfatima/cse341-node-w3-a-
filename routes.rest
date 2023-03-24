@@ -3,38 +3,42 @@
 GET http://localhost:8080/ HTTP/1.1
 
 ### Get contact by id
-GET http://localhost:8080/contacts
+GET http://localhost:8080/KoreanIdol
 ### 
-GET http://localhost:8080/contacts/6407c395a40dc76a50d7c4b4
+GET http://localhost:8080/KoreanIdol/641ceceeb2f7f6e18893c52c
 ### 
-GET http://localhost:8080/contacts/6407c395a40dc76a50d7c4b5
+GET http://localhost:8080/KoreanIdol/641ceccfb2f7f6e188939f29
 ###
-GET http://localhost:8080/contacts/6407c395a40dc76a50d7c4b6
+GET http://localhost:8080/KoreanIdol/641cec2ab2f7f6e18892d4c2
 
 ### Create contact 
-POST http://localhost:8080/contacts HTTP/1.1
+POST http://localhost:8080/KoreanIdol HTTP/1.1
 content-type:application/json
 
 {
-    "firstName": "Albus", 
-    "lastName": "Dumbledore", 
-    "email": "foreverFenix@test.com", 
-    "favoriteColor": "Brown", 
-    "birthday": "07/19/1881"
+    "nativeName": "김석우",
+    "firstName": "Seok-woo",
+    "lastName": "Kim",
+    "birthday": "09/07/1996",
+    "genere": "male",
+    "height": 1.90,
+    "occupation": "Model"
 }
 
 ### PUT contact 
-PUT http://localhost:8080/contacts/6419367aff7cc9d592413961  HTTP/1.1
+PUT http://localhost:8080/contacts/641cf054796364bccb946701  HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"Severus", 
-    "lastName":"Snape", 
-    "email":"snake@gmail.com", 
-    "favoriteColor":"Green", 
-    "birthday":"01/09/1960"
+    "nativeName": "송강",
+    "firstName": "Kang",
+    "lastName": "Song",
+    "birthday": "04/23/1994",
+    "genere": "male",
+    "height": 1.84,
+    "occupation": "Actor"
 } 
 
 ### DELETE contact 
 
-DELETE http://localhost:8080/contacts/6419367aff7cc9d592413961 HTTP/1.1
+DELETE http://localhost:8080/contacts/641ceceeb2f7f6e18893c52c HTTP/1.1

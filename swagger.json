@@ -1,8 +1,8 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "My API",
-    "description": "Contacts: Souls of Magic API",
+    "title": "Korean Idol API",
+    "description": "My Korean Idol API",
     "version": "1.0.0"
   },
   "host": "localhost:8080",
@@ -25,7 +25,7 @@
         "responses": {}
       }
     },
-    "/contacts/": {
+    "/koreanIdol/": {
       "get": {
         "description": "",
         "produces": [
@@ -47,19 +47,25 @@
             "schema": {
               "type": "object",
               "properties": {
+                "nativeName": {
+                  "example": "any"
+                },
                 "firstName": {
                   "example": "any"
                 },
                 "lastName": {
                   "example": "any"
                 },
-                "email": {
-                  "example": "any"
-                },
-                "favoriteColor": {
-                  "example": "any"
-                },
                 "birthday": {
+                  "example": "any"
+                },
+                "genere": {
+                  "example": "any"
+                },
+                "height": {
+                  "example": "any"
+                },
+                "occupation": {
                   "example": "any"
                 }
               }
@@ -76,7 +82,7 @@
         }
       }
     },
-    "/contacts/{id}": {
+    "/koreanIdol/{id}": {
       "get": {
         "description": "",
         "produces": [
@@ -111,19 +117,25 @@
             "schema": {
               "type": "object",
               "properties": {
+                "nativeName": {
+                  "example": "any"
+                },
                 "firstName": {
                   "example": "any"
                 },
                 "lastName": {
                   "example": "any"
                 },
-                "email": {
-                  "example": "any"
-                },
-                "favoriteColor": {
-                  "example": "any"
-                },
                 "birthday": {
+                  "example": "any"
+                },
+                "genere": {
+                  "example": "any"
+                },
+                "height": {
+                  "example": "any"
+                },
+                "occupation": {
                   "example": "any"
                 }
               }

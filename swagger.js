@@ -2,8 +2,8 @@ const swaggerAutogen = require('swagger-autogen')()
 
 const doc = {
   info: {
-    title: 'My API',
-    description: 'Contacts: Souls of Magic API'
+    title: 'Korean Idol API',
+    description: 'My Korean Idol API'
   },
   host: 'localhost:8080',
   basePath: '/',

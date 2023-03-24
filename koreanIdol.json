@@ -1,0 +1,47 @@
+{
+    "KoreanIdol1": {
+        "nativeName": "이종석",
+        "firstName": "Jong-suk",
+        "lastName": "Lee",
+        "birthday": "09/01/1989",
+        "genere": "male",
+        "height": 1.87,
+        "occupation": "Actor"
+    },
+    "KoreanIdol2": {
+        "nativeName": "이민호",
+        "firstName": "Min-ho",
+        "lastName": "Lee",
+        "birthday": "06/22/1987",
+        "genere": "male",
+        "height": 1.87,
+        "occupation": "Actor"
+    },
+    "KoreanIdol3": {
+        "nativeName": "박은빈",
+        "firstName": "Eun-bin",
+        "lastName": "Park",
+        "birthday": "09/04/1992",
+        "genere": "female",
+        "height": 1.63,
+        "occupation": "Actress"
+    },
+    "KoreanIdol4": {
+        "nativeName": "아이유",
+        "firstName": "Ji-eun",
+        "lastName": "Lee",
+        "birthday": "05/16/1993",
+        "genere": "female",
+        "height": 1.62,
+        "occupation": "Singer"
+    },
+    "KoreanIdol5": {
+        "nativeName": "이재욱",
+        "firstName": "Jae-wook",
+        "lastName": "Lee",
+        "birthday": "05/19/1998",
+        "genere": "male",
+        "height": 1.87,
+        "occupation": "Actor"
+    }
+}
